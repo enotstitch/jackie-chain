@@ -1,4 +1,5 @@
 .hero {
+	padding-top: 50px;
 	color: var(--accent-color);
 
 	&__top {
@@ -7,11 +8,27 @@
 		align-items: center;
 		gap: 30px;
 		margin-bottom: 30px;
+
+		@media (max-width: 768px) {
+			gap: 15px;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__bottom {
 		display: flex;
 		justify-content: center;
+	}
+
+	&__img {
+		max-width: 390px;
+
+		@media (max-width: 992px) {
+			max-width: 300px;
+		}
+		@media (max-width: 540px) {
+			max-width: 170px;
+		}
 	}
 
 	&__subtitle {
@@ -34,18 +51,49 @@
 		&::after {
 			content: url('@img/hero/money.gif');
 			position: absolute;
+			max-height: 100px;
 
-			// transform: scale(0.25);
+			@media (max-width: 1250px) {
+				transform: scale(0.8);
+			}
+
+			@media (max-width: 992px) {
+				transform: scale(0.4);
+			}
+
+			@media (max-width: 768px) {
+				display: none;
+			}
 		}
 
 		&::before {
 			right: -300px;
 			top: 0;
+
+			@media (max-width: 1250px) {
+				right: -150px;
+			}
+
+			@media (max-width: 992px) {
+				right: -80px;
+			}
 		}
 
 		&::after {
 			left: -300px;
 			top: 0;
+
+			@media (max-width: 1250px) {
+				left: -150px;
+			}
+
+			@media (max-width: 992px) {
+				left: -80px;
+			}
 		}
+	}
+
+	@media (max-width: 1170px) {
+		padding-top: 130px;
 	}
 }
