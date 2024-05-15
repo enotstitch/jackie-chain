@@ -1,0 +1,51 @@
+.hero {
+	color: var(--accent-color);
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+		margin-bottom: 30px;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__subtitle {
+		@include adaptive-font(24, 16);
+		margin: 0;
+		line-height: 180%;
+		text-align: center;
+	}
+
+	&__title {
+		@include adaptive-font(96, 54);
+		position: relative;
+		margin: 0;
+		max-width: 550px;
+		line-height: 180%;
+		text-align: center;
+		text-shadow: 5px 5px var(--second-color);
+
+		&::before,
+		&::after {
+			content: url('@img/hero/money.gif');
+			position: absolute;
+
+			// transform: scale(0.25);
+		}
+
+		&::before {
+			right: -300px;
+			top: 0;
+		}
+
+		&::after {
+			left: -300px;
+			top: 0;
+		}
+	}
+}
