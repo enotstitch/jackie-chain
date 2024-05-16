@@ -460,7 +460,7 @@
 	height: 62px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	transform: rotate(70deg);
+	rotate: 70deg;
 	transition: opacity 0.2s linear, visibility 0.2s linear;
 	animation: arrow 2s ease-in-out infinite;
 }
