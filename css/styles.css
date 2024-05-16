@@ -1393,6 +1393,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  margin-bottom: 80px;
 }
 @media (max-width: 1150px) {
   .write__wrap {
@@ -1438,5 +1439,19 @@ img {
 @media (max-width: 1150px) {
   .write-list__link {
     padding: 15px;
+  }
+}
+.write__arrow {
+  margin: 0 auto;
+  max-width: 156px;
+}
+@media (max-width: 1150px) {
+  .write__arrow {
+    max-width: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .write__arrow {
+    max-width: 60px;
   }
 }/*# sourceMappingURL=styles.css.map */
