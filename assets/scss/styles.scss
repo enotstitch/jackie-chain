@@ -14,7 +14,8 @@
 // @import "components/sliders";
 
 // * Main styles
-@import '../components/header/header';
+@import 'chunk/header';
 @import 'chunk/hero';
 @import 'chunk/about';
+@import 'chunk/cases';
 @import 'chunk/footer';
