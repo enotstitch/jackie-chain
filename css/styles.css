@@ -1603,4 +1603,24 @@ img {
     width: 10px;
     height: 10px;
   }
+}
+
+.footer {
+  min-height: 120px;
+  background-image: url("@img/footer/bg.png");
+}
+.footer__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 120px;
+}
+.footer__text {
+  font-size: calc(14px + 10 * (100vw - 320px) / 850);
+  margin: 0;
+  line-height: 180%;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
