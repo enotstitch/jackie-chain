@@ -1,0 +1,11 @@
+.title {
+	@include adaptive-font(64, 28);
+	margin: 0;
+	line-height: 180%;
+	text-align: center;
+	color: var(--accent-color);
+
+	@media (min-width: 1270px) {
+		font-size: 64px;
+	}
+}

@@ -51,6 +51,7 @@
 		&::after {
 			content: url('@img/hero/money.gif');
 			position: absolute;
+			top: 0;
 			max-height: 100px;
 
 			@media (max-width: 1250px) {
@@ -68,7 +69,6 @@
 
 		&::before {
 			right: -300px;
-			top: 0;
 
 			@media (max-width: 1250px) {
 				right: -150px;
@@ -81,7 +81,6 @@
 
 		&::after {
 			left: -300px;
-			top: 0;
 
 			@media (max-width: 1250px) {
 				left: -150px;
