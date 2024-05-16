@@ -9,3 +9,36 @@
 		font-size: 64px;
 	}
 }
+
+.link {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 130px;
+	max-width: 350px;
+	background-image: url('@img/icons/sprite.svg#big-link-bg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: -1;
+		width: 85%;
+		height: 80%;
+		background-color: var(--accent-color);
+		transform: translate(-50%, -50%);
+		transition: filter 0.1s;
+	}
+
+	&:hover {
+		&::after {
+			filter: brightness(0.75);
+		}
+	}
+}
