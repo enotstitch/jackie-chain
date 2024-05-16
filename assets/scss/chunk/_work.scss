@@ -1,0 +1,126 @@
+.work {
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 20px;
+
+		@media (max-width: 1150px) {
+			justify-content: space-around;
+		}
+	}
+
+	&-card {
+		position: relative;
+		min-width: 360px;
+		min-height: 775px;
+		max-width: 360px;
+		background-image: url('@img/work/border-yellow.png');
+		background-repeat: no-repeat;
+
+		&__icon {
+			content: '';
+			position: absolute;
+			right: 50%;
+			top: -40px;
+			width: 80px;
+			height: 80px;
+			background-image: url('@img/work/arrow.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			transform: translateX(50%);
+
+			&--weapon {
+				background-image: url('@img/work/weapon.png');
+			}
+
+			&--sword {
+				background-image: url('@img/work/sword.png');
+			}
+		}
+
+		&__title {
+			margin: 0;
+			margin-bottom: 55px;
+			padding-top: 35px;
+			font-size: 24px;
+			line-height: 180%;
+			text-align: center;
+		}
+
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+		}
+
+		&__text {
+			margin: 0;
+			text-align: center;
+		}
+
+		&--blue {
+			background-image: url('@img/work/border-blue.png');
+		}
+
+		&--pink {
+			background-image: url('@img/work/border-pink.png');
+		}
+	}
+}
+
+.border {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	width: fit-content;
+	min-width: 250px;
+	min-height: 56px;
+	font-size: 14px;
+	line-height: 180%;
+	background-image: url('@img/cases/border-yellow.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&--middle-yellow {
+		min-height: 97px;
+		max-width: 250px;
+		background-image: url('@img/work/border-middle-yellow.png');
+	}
+
+	&--middle-blue {
+		min-height: 97px;
+		max-width: 250px;
+		background-image: url('@img/work/border-middle-blue.png');
+	}
+
+	&--middle-pink {
+		min-height: 97px;
+		max-width: 250px;
+		background-image: url('@img/work/border-middle-pink.png');
+	}
+
+	&--big-yellow {
+		min-height: 218px;
+		max-width: 250px;
+		background-image: url('@img/work/border-big-yellow.png');
+	}
+
+	&--big-blue {
+		min-height: 255px;
+		max-width: 250px;
+		background-image: url('@img/work/border-big-blue.png');
+	}
+
+	&--big-pink {
+		min-height: 255px;
+		max-width: 250px;
+		background-image: url('@img/work/border-big-pink.png');
+	}
+}
