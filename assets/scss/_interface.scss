@@ -1,3 +1,7 @@
+.section {
+	padding: 50px 0;
+}
+
 .title {
 	@include adaptive-font(64, 28);
 	margin: 0;
