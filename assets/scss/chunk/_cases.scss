@@ -131,12 +131,17 @@
 
 	&__blocks {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
+		gap: 50px;
+
+		@media (max-width: 768px) {
+			gap: 25px;
+		}
 	}
 
 	&__block {
 		position: relative;
-		margin-bottom: 200px;
 		border: 16px solid var(--second-color);
 		border-right-width: 16px * 2;
 		border-left-width: 16px * 2;
@@ -172,6 +177,12 @@
 
 			@media (max-width: 768px) {
 				left: -8px;
+			}
+		}
+
+		&:nth-child(even) {
+			& .cases__top {
+				flex-direction: row-reverse;
 			}
 		}
 
@@ -513,6 +524,10 @@
 		@media (max-width: 768px) {
 			font-size: 11px;
 		}
+	}
+
+	&--short::after {
+		width: 3%;
 	}
 
 	@media (max-width: 992px) {
