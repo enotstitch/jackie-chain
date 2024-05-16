@@ -1,0 +1,151 @@
+.contacts {
+	&__title {
+		margin-bottom: 100px;
+	}
+
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+		border: 10px solid var(--second-color);
+		border-right-width: 10px * 2;
+		border-left-width: 10px * 2;
+		padding: 50px;
+		max-width: 740px;
+		gap: 20px;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			width: 16px;
+			height: 96%;
+			background-color: var(--dark-color);
+			transform: translateY(-50%);
+
+			@media (max-width: 768px) {
+				width: 5px;
+			}
+		}
+
+		&::before {
+			right: -10px;
+
+			@media (max-width: 768px) {
+				right: -5px;
+			}
+		}
+
+		&::after {
+			left: -10px;
+
+			@media (max-width: 768px) {
+				left: -5px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			border-width: 5px;
+			border-right-width: 5px * 2;
+			border-left-width: 5px * 2;
+			padding: 15px;
+		}
+	}
+
+	&__subtitle {
+		@include adaptive-font(40, 25);
+		margin: 0;
+		margin-bottom: 25px;
+		line-height: 180%;
+		text-align: center;
+		text-shadow: 3px 3px var(--second-color);
+		color: var(--accent-color);
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__info {
+		@include adaptive-font(24, 12);
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+		margin-bottom: 10px;
+		line-height: 180%;
+		text-align: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&--color-green {
+			color: var(--second-color);
+		}
+
+		&--color-yellow {
+			color: var(--yellow-color);
+		}
+	}
+}
+
+.corner-small {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: var(--dark-color);
+
+	&--top-left {
+		left: -20px;
+		top: -12px;
+		clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 50%, 100% 50%, 100% 0%);
+
+		@media (max-width: 768px) {
+			left: -10px;
+			top: -5px;
+		}
+	}
+
+	&--top-right {
+		right: -20px;
+		top: -11px;
+		clip-path: polygon(50% 50%, 50% 100%, 100% 100%, 100% 0, 0 0, 0 50%);
+
+		@media (max-width: 768px) {
+			right: -10px;
+			top: -5px;
+		}
+	}
+
+	&--bottom-right {
+		right: -20px;
+		bottom: -11px;
+		clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 0, 50% 0, 50% 50%);
+
+		@media (max-width: 768px) {
+			right: -10px;
+			bottom: -5px;
+		}
+	}
+
+	&--bottom-left {
+		left: -20px;
+		bottom: -11px;
+		clip-path: polygon(50% 50%, 50% 0, 0 0, 0 100%, 100% 100%, 100% 50%);
+
+		@media (max-width: 768px) {
+			left: -10px;
+			bottom: -5px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		width: 10px;
+		height: 10px;
+	}
+}
