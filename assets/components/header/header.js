@@ -1,41 +1,20 @@
-// Меню бургер
-const menuBurger = document.querySelector('.menu__burger');
-const menuBody = document.querySelector('.menu__body');
-if (menuBurger) {
-	menuBurger.addEventListener('click', function (e) {
-		document.body.classList.toggle('lock');
-		menuBurger.classList.toggle('active');
-		menuBody.classList.toggle('active');
-	});
-}
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
+const heroHeight = hero.offsetHeight;
+let lastOffset = 0;
 
-// Прокрутка при клике
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-if (menuLinks.length > 0) {
-	menuLinks.forEach((menuLink) => {
-		menuLink.addEventListener('click', onMenuLinkClick);
-	});
+window.addEventListener('scroll', (e) => {
+	scrollOffset = window.pageYOffset;
 
-	function onMenuLinkClick(e) {
-		const menuLink = e.target;
-		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue =
-				gotoBlock.getBoundingClientRect().top +
-				pageYOffset -
-				document.querySelector('header').offsetHeight;
-
-			if (menuBurger.classList.contains('active')) {
-				document.body.classList.remove('lock');
-				menuBurger.classList.remove('active');
-				menuBody.classList.remove('active');
-			}
-
-			window.scrollTo({
-				top: gotoBlockValue,
-				behavior: 'smooth',
-			});
-			e.preventDefault();
-		}
+	if (scrollOffset > lastOffset) {
+		header.classList.remove('fixed');
+	} else {
+		header.classList.add('fixed');
 	}
-}
+
+	if (scrollOffset < heroHeight) {
+		header.classList.remove('fixed');
+	}
+
+	lastOffset = scrollOffset;
+});
