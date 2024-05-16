@@ -1,7 +1,10 @@
 .header {
-	position: fixed;
+	position: absolute;
+	left: 0;
+	top: 0;
 	padding-top: 50px;
 	width: 100%;
+	transition: 0.2s all;
 
 	&__container {
 		display: flex;
@@ -27,21 +30,23 @@
 		margin-right: 20px;
 	}
 
+	&.fixed {
+		position: fixed;
+		z-index: 5;
+		border-bottom: 1px solid var(--accent-color);
+		padding: 25px 0;
+		background-color: #000;
+	}
+
 	@media (max-width: 768px) {
 		padding-top: 20px;
 	}
 }
 
 .icons {
-	&__list {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-
-		@media (max-width: 768px) {
-			gap: 10px;
-		}
-	}
+	display: flex;
+	align-items: center;
+	gap: 20px;
 
 	&__item {
 		display: flex;
@@ -52,6 +57,10 @@
 
 	&__num {
 		font-size: 14px;
+	}
+
+	@media (max-width: 768px) {
+		gap: 10px;
 	}
 }
 

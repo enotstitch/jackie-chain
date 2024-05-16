@@ -15,7 +15,12 @@
 		}
 
 		@media (max-width: 992px) {
-			rotate: -90deg;
+			transform: rotate(-90deg);
+		}
+
+		@media (max-width: 768px) {
+			width: 80px;
+			height: 80px;
 		}
 	}
 
@@ -109,6 +114,7 @@
 		@include adaptive-font(15, 12);
 		margin: 0;
 		margin-bottom: 10px;
+		line-height: 180%;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -117,7 +123,6 @@
 
 	@media (max-width: 1200px) {
 		padding-top: 25px;
-		padding-left: 20px;
 		min-height: 350px;
 		max-width: 345px;
 	}

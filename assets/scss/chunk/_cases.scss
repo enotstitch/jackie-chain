@@ -17,6 +17,7 @@
 			}
 
 			@media (max-width: 992px) {
+				top: -5px;
 				transform: scale(0.4);
 			}
 
@@ -131,12 +132,17 @@
 
 	&__blocks {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
+		gap: 50px;
+
+		@media (max-width: 768px) {
+			gap: 25px;
+		}
 	}
 
 	&__block {
 		position: relative;
-		margin-bottom: 200px;
 		border: 16px solid var(--second-color);
 		border-right-width: 16px * 2;
 		border-left-width: 16px * 2;
@@ -148,7 +154,7 @@
 			content: '';
 			position: absolute;
 			top: 50%;
-			width: 16px;
+			width: 17px;
 			height: 95%;
 			background-color: var(--dark-color);
 			transform: translateY(-50%);
@@ -172,6 +178,12 @@
 
 			@media (max-width: 768px) {
 				left: -8px;
+			}
+		}
+
+		&:nth-child(even) {
+			& .cases__top {
+				flex-direction: row-reverse;
 			}
 		}
 
@@ -394,41 +406,41 @@
 	background-color: var(--dark-color);
 
 	&--top-left {
-		left: -32px;
+		left: -34px;
 		top: -17px;
 		clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 50%, 100% 50%, 100% 0%);
 		@media (max-width: 768px) {
-			left: -16px;
+			left: -18px;
 			top: -10px;
 		}
 	}
 
 	&--top-right {
-		right: -32px;
+		right: -34px;
 		top: -17px;
 		clip-path: polygon(50% 50%, 50% 100%, 100% 100%, 100% 0, 0 0, 0 50%);
 		@media (max-width: 768px) {
-			right: -16px;
+			right: -18px;
 			top: -10px;
 		}
 	}
 
 	&--bottom-right {
-		right: -32px;
+		right: -34px;
 		bottom: -17px;
 		clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 0, 50% 0, 50% 50%);
 		@media (max-width: 768px) {
-			right: -16px;
+			right: -18px;
 			bottom: -10px;
 		}
 	}
 
 	&--bottom-left {
-		left: -32px;
+		left: -34px;
 		bottom: -17px;
 		clip-path: polygon(50% 50%, 50% 0, 0 0, 0 100%, 100% 100%, 100% 50%);
 		@media (max-width: 768px) {
-			left: -16px;
+			left: -18px;
 			bottom: -10px;
 		}
 	}
@@ -449,9 +461,9 @@
 	height: 62px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	rotate: 70deg;
 	transition: opacity 0.2s linear, visibility 0.2s linear;
 	animation: arrow 2s ease-in-out infinite;
-	rotate: 70deg;
 }
 
 @keyframes arrow {
@@ -513,6 +525,10 @@
 		@media (max-width: 768px) {
 			font-size: 11px;
 		}
+	}
+
+	&--short::after {
+		width: 3%;
 	}
 
 	@media (max-width: 992px) {
