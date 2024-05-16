@@ -16,5 +16,9 @@
 		margin: 0;
 		line-height: 180%;
 		text-align: center;
+
+		@media (min-width: 1270px) {
+			font-size: 24px;
+		}
 	}
 }

@@ -45,12 +45,21 @@
 		&__link {
 			@include adaptive-font(24, 14);
 			display: inline-block;
-			border-radius: 25px;
+			border-radius: 100px;
 			padding: 25px;
 			width: 100%;
 			line-height: 180%;
 			text-transform: uppercase;
 			color: var(--accent-color);
+			transition: 0.2s background-color;
+
+			&:hover {
+				background-color: #ed70d32e;
+			}
+
+			@media (min-width: 1270px) {
+				font-size: 24px;
+			}
 
 			@media (max-width: 1150px) {
 				padding: 15px;

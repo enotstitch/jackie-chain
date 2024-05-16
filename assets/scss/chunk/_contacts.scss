@@ -63,6 +63,10 @@
 		text-align: center;
 		text-shadow: 3px 3px var(--second-color);
 		color: var(--accent-color);
+
+		@media (min-width: 1270px) {
+			font-size: 40px;
+		}
 	}
 
 	&__inner {
@@ -86,10 +90,24 @@
 
 		&--color-green {
 			color: var(--second-color);
+			transition: 0.2s filter;
+
+			&:hover {
+				filter: brightness(0.75);
+			}
 		}
 
 		&--color-yellow {
 			color: var(--yellow-color);
+			transition: 0.2s filter;
+
+			&:hover {
+				filter: brightness(0.75);
+			}
+		}
+
+		@media (min-width: 1270px) {
+			font-size: 24px;
 		}
 	}
 }
