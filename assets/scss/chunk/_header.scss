@@ -64,6 +64,16 @@
 	}
 }
 
+.menu {
+	&__link {
+		transition: 0.2s filter;
+
+		&:hover {
+			filter: brightness(0.75);
+		}
+	}
+}
+
 .hearts {
 	@media (max-width: 768px) {
 		max-width: 100px;
