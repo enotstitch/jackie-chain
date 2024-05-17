@@ -154,7 +154,7 @@
 		border: 16px solid var(--second-color);
 		border-right-width: 16px * 2;
 		border-left-width: 16px * 2;
-		padding: 15px 0;
+		padding: 15px;
 		max-width: 1220px;
 
 		&::after,
@@ -192,6 +192,10 @@
 		&:nth-child(even) {
 			& .cases__top {
 				flex-direction: row-reverse;
+
+				@media (max-width: 992px) {
+					flex-direction: column;
+				}
 			}
 		}
 
@@ -479,6 +483,10 @@
 	rotate: 70deg;
 	transition: opacity 0.2s linear, visibility 0.2s linear;
 	animation: arrow 2s ease-in-out infinite;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
 }
 
 @keyframes arrow {
