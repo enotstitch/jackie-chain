@@ -1,0 +1,18 @@
+{
+	"name": "CryptoMario",
+	"short_name": "CryptoMario",
+	"description": "",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#020202",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "163x219",
+			"type": "image/png"
+		}
+	],
+	"screenshots": [],
+	"theme_color": "#020202"
+}

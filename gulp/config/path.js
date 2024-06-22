@@ -16,7 +16,7 @@ export const path = {
 
 	src: {
 		html: `${srcFolder}/html/*.html`,
-		scss: `${srcFolder}/scss/styles.scss`,
+		scss: `${srcFolder}/scss/{styles,form}.scss`,
 		js: `${srcFolder}/js/scripts.js`,
 		images: `${srcFolder}/resources/img/**/*.{jpg,jpeg,png,svg,gif}`,
 		sprite: `${srcFolder}/resources/icons/svg/*.svg`,
